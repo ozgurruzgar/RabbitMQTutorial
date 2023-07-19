@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQPublisher", "Rabbit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbirMQSubscriber", "RabbirMQSubscriber\RabbirMQSubscriber.csproj", "{3A180FB0-8C95-4F09-BD11-1BFEA938A396}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{E33CC5DB-6A75-488E-BE5C-E8B4159EC0E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{E33CC5DB-6A75-488E-BE5C-E8B4159EC0E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQWatermark.App", "RabbitMQWatermark.App\RabbitMQWatermark.App.csproj", "{E337E9DF-24B6-4ED1-9B1A-EFF8DD4BF8D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQWatermark.App", "RabbitMQWatermark.App\RabbitMQWatermark.App.csproj", "{E337E9DF-24B6-4ED1-9B1A-EFF8DD4BF8D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQWeb.ExcelCreate", "RabbitMQWeb.ExcelCreate\RabbitMQWeb.ExcelCreate.csproj", "{FE2D4371-D01E-4021-AB0F-77B4F21D842B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E337E9DF-24B6-4ED1-9B1A-EFF8DD4BF8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E337E9DF-24B6-4ED1-9B1A-EFF8DD4BF8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E337E9DF-24B6-4ED1-9B1A-EFF8DD4BF8D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2D4371-D01E-4021-AB0F-77B4F21D842B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2D4371-D01E-4021-AB0F-77B4F21D842B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2D4371-D01E-4021-AB0F-77B4F21D842B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2D4371-D01E-4021-AB0F-77B4F21D842B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
