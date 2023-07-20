@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RabbitMQ.Client;
+using RabbitMQWeb.ExcelCreate.Hubs;
 using RabbitMQWeb.ExcelCreate.Models;
 using RabbitMQWeb.ExcelCreate.Services;
 using System;
@@ -30,6 +31,7 @@ namespace RabbitMQWeb.ExcelCreate
         {
             services.AddSingleton(sp => new ConnectionFactory() { Uri = new Uri(Configuration.GetConnectionString("RabbitMQ")), DispatchConsumersAsync = true });
 
+            services.AddSingleton<RabbitMQPublisher>();
             services.AddSingleton<RabbitMQClientService>();
 
             services.AddDbContext<AppDbContext>(options =>
@@ -42,6 +44,7 @@ namespace RabbitMQWeb.ExcelCreate
                 opt.User.RequireUniqueEmail = true;
             }).AddEntityFrameworkStores<AppDbContext>();
 
+            services.AddSignalR();
             services.AddControllersWithViews();
         }
 
@@ -69,6 +72,8 @@ namespace RabbitMQWeb.ExcelCreate
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapHub<MyHub>("/MyHub");
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
